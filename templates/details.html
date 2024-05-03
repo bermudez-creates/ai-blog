@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Blog Post</title>
+  </head>
+  <body class="bg-gray-100 font-sans antialised">
+    <!-- Navbar -->
+    <nav class="bg-indigo-500 p-7 text-purple-200 flex justify-between">
+      <div>
+        <h1 class="3x-l font-bold">AI Generated Blogs</h1>
+        <h2 class="3x-l font-bold">{{user.username}}</h2>
+      </div>
+      <div>
+        <a href="/blog-list" class="ttext-purple-100 hover:underline mx-4r"
+          >Saved Blogs</a
+        >
+        <a href="/" class="text-purple-100 hover:underline mx-4">Home</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Main Content Blog Page -->
+    <div class="container mx-auto mt-8 mb-4 px-4 sm:px-0">
+      <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <section>
+          <h2
+            class="text-xl font-semibold mb-2 p-4 text-center text-indigo-500"
+          >
+            Blog Post
+          </h2>
+          <div class="border border-indigo-500 p-4 rounded-lg">
+            <h3 class="text-lg font-semibold text-indigo-700 text-center mb-3">
+              {{blog_article_detail.youtube_title}}
+            </h3>
+            <p class="text-purple-800">
+              {{blog_article_detail.generated_content}}
+            </p>
+            <hr class="my-4 border border-indigo-500" />
+            <h4 class="text-lg font-semibold">
+              {{blog_article_detail.youtube_title}}
+            </h4>
+
+            <a
+              href="{{blog_article_detail.youtube_link}}"
+              class="text-blue-400 font-semibold hover:text-blue-800"
+            >
+              {{blog_article_detail.youtube_link}}
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Main Content Blog Page End -->
+    <!-- Footer -->
+    <footer
+      class="text-purple-600 justify-between text-center mb-2 mt-2 font-semibold"
+    >
+      Made with curiosity by
+      <a href="https://github.com/bermudez-creates"><i>@steezy</i></a>
+    </footer>
+  </body>
+</html>
